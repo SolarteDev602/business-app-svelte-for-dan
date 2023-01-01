@@ -1,4 +1,5 @@
 <script>
+	import Todos from "./components/Todos.svelte"
 	export let name;
 	let flag
 	const toggleName = () => {
@@ -13,6 +14,8 @@
 	<button on:click="{toggleName}">ToggleName</button>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
+
+<Todos />
 
 <style>
 	main {
