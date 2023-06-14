@@ -1,9 +1,16 @@
 <script>
 	export let name;
+	let flag
+	const toggleName = () => {
+		if(flag) name = "World"
+		else name = "Svelte"
+		flag = !flag
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
+	<button on:click="{toggleName}">ToggleName</button>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
