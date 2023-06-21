@@ -1,5 +1,6 @@
 <script>
 	import Todos from "./components/Todos.svelte"
+
 	export let name;
 	let flag
 	const toggleName = () => {
@@ -7,6 +8,12 @@
 		else name = "Svelte"
 		flag = !flag
 	}
+
+	let todos = [
+		{ id: 1, name: "Create a Svelte starter app", completed: true },
+		{ id: 2, name: "Create your first component", completed: true },
+		{ id: 3, name: "Complete the rest of the tutorial", completed: false },
+	];
 </script>
 
 <main>
@@ -15,7 +22,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
-<Todos />
+<Todos {todos} />
 
 <style>
 	main {
